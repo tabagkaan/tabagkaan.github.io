@@ -1,62 +1,385 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Basic Site</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    nav {
-      display: flex;
-      background-color: #f5f5f5;
-      border-bottom: 1px solid #ddd;
-    }
-    nav a {
-      flex: 1;
-      text-align: center;
-      padding: 15px;
-      text-decoration: none;
-      color: #1e73be;
-      font-weight: bold;
-      border-right: 1px solid #ddd;
-    }
-    nav a:last-child {
-      border-right: none;
-    }
-    section {
-      padding: 20px;
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="#home">home</a>
-    <a href="#projects">projects</a>
-    <a href="#bigideas">big ideas</a>
-    <a href="#documentation">documentation</a>
-  </nav>
-
-  <section id="home">
-    <h2>Home</h2>
-    <p>Welcome to our basic site. This is the home section where we introduce the purpose of the website.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Here we showcase our latest projects, experiments, and case studies.</p>
-  </section>
-
-  <section id="bigideas">
-    <h2>Big Ideas</h2>
-    <p>This section is dedicated to bold concepts, innovative thoughts, and future possibilities.</p>
-  </section>
-
-  <section id="documentation">
-    <h2>Documentation</h2>
-    <p>In this section, you will find guides, tutorials, and resources to help you use our work.</p>
-  </section>
-</body>
+  <title>Kaan Tabag's Personal Website</title> <!-- The title shown in the browser tab -->
 </html>
+  
+ <body>
+   <h1>Kaan Tabag (kodum biraz ucube pardon) </h1>
+   <style>
+        h1 {
+            text-align: center; /*  makes the text centered */
+        }
+    </style>
+
+  <!--<div style="text-align: center;"> 
+  <button onclick="
+    let text = document.getElementById('myGroup');
+    text.style.display = (text.style.display === 'none') ? 'block' : 'none';
+     /* button is a button acts on click, let.. crates a veriable, get element.. means to find element id as mytext, 
+     text style display is the command to hide or show the text, block is show, none in hide, and the rest of it is the
+     same as if else clause so it checks inside () with ? than if true is before : and if false is after :
+    makes the text centered , style makes the button centered, last style makes the button offsetted 20 px that effects just 
+    the button not its parent the other one aafects the whole group, doesnt need to be like this just experimenting different methods.
+    this only works on 1 button and cant be next to each other multiple buttons so im doing a diffent one */
+  " style="transform: translateX(50px);">
+    Home
+  </button>-->
+
+  <div style="display:flex; justify-content:center; gap:20px;">  <!-- display flex makes all elements inside the container
+    in one row next to each other than justify content means to center them all  horizontally, gap 20 is the gap between elements-->
+  <button onclick="
+    let text = document.getElementById('myGroup');
+    text.style.display = 'block' ;
+    let text1 = document.getElementById('myGroup1');
+    text1.style.display = 'none';
+    let text2 = document.getElementById('myGroup2');
+    text2.style.display = 'none';
+    let text3 = document.getElementById('myGroup3');
+    text3.style.display = 'none';
+     /* button is a button acts on click, let.. crates a veriable, get element.. means to find element id as mytext, 
+     text style display is the command to hide or show the text, block is show, none in hide, */
+  ">
+    Home
+  </button>
+
+  <button onclick="
+    let text1 = document.getElementById('myGroup1');
+    text1.style.display = 'block' 
+    let text = document.getElementById('myGroup');
+    text.style.display = 'none';
+    let text2 = document.getElementById('myGroup2');
+    text2.style.display = 'none';
+    let text3 = document.getElementById('myGroup3');
+    text3.style.display = 'none';
+     
+  ">
+    Projects
+  </button>
+
+  <button onclick="
+    let text2 = document.getElementById('myGroup2');
+    text2.style.display = 'block' 
+    let text1 = document.getElementById('myGroup1');
+    text1.style.display = 'none';
+    let text = document.getElementById('myGroup');
+    text.style.display = 'none';
+    let text3 = document.getElementById('myGroup3');
+    text3.style.display = 'none';
+
+  ">
+    Big Ideas
+  </button>
+
+  <button onclick="
+    let text3 = document.getElementById('myGroup3');
+    text3.style.display = 'block' 
+    let text1 = document.getElementById('myGroup1');
+    text1.style.display = 'none';
+    let text2 = document.getElementById('myGroup2');
+    text2.style.display = 'none';
+    let text = document.getElementById('myGroup');
+    text.style.display = 'none';
+     
+  ">
+    Documentation
+  </button>
+</div>
+
+
+
+
+
+   <div id="myGroup" style="display: none;">
+    <h2>Who am I?</h2>
+    <p>I am a student at Hisar School, while also attending sedat yancins perfect csp class, (o kadar geç ki kim olduğum yazmaya uğraşamdım afedin)
+    </p>
+    <img src="images/kaancsp.jpeg" alt="Example image" style="width:150px; height:auto;">
+   </div>
+
+    <!-- gives id to the group (the home page) so can be found later, style... means that its hidden if it was block it will be shown
+     h2 is a heading that is 2. biggest, p is a paragraph, img -->
+    <style>
+        
+       #myGroup {
+      color: rgb(0, 0, 0);
+      font-size: 20px;
+      font-family: Impact, sans-serif;
+      }
+    
+    </style>
+    <!-- id found like above #mygroup, than changed its color, than font size-->
+
+
+ <div id="myGroup1" style="display: none;">
+  <h2>XOX-UI</h2>
+  <p>I created a simple XOX (tic-tac-toe) interface in Swift. The focus was purely on designing the layout and visuals, without adding gameplay functionality.</p>
+  <img src="images/xox.png" alt="XOX UI project image" style="width:150px; height:auto;">
+
+  <h2>XOX-Scratch</h2>
+  <p>I developed a fully functional XOX game using Scratch to explore block-based programming. This project highlights my ability to transform simple logic into an interactive and engaging experience.</p>
+  <img src="images/xoxs.gif" alt="XOX Scratch project image" style="width:150px; height:auto;">
+
+  <h2>Clock</h2>
+  <p>I built a basic clock in Swift that increments by one hour when clicked. While it doesn't track real-time data, it demonstrates interactive event handling and user-triggered updates.</p>
+  <img src="images/clock.gif" alt="Clock project image" style="width:150px; height:auto;">
+
+  <h2>Portrait</h2>
+  <p>I designed a portrait using only basic geometric shapes in Swift. This project was a creative exercise in combining simple elements to form a recognizable image.</p>
+  <img src="images/Van-Gogh.png" alt="Portrait project image" style="width:150px; height:auto;">
+
+  <h2>Calculator</h2>
+  <p>I built a basic calculator in Swift that processes two inputs and performs the four fundamental operations. This project showcases my ability to work with user input, arithmetic logic, and clean interface design.</p>
+  <img src="images/hesapmak.png" alt="Calculator project image" style="width:150px; height:auto;">
+ </div>
+
+
+    <!-- gives id to the group (the home page) so can be found later, style... means that its hidden if it was block it will be shown
+     h2 is a heading that is 2. biggest, p is a paragraph, img -->
+    <style>
+        
+       #myGroup1 {
+      color: rgb(0, 0, 0);
+      font-size: 20px;
+      font-family: Impact, sans-serif;
+      }
+    
+    </style>
+    <!-- id found like above #mytext, than changed its color, than font size-->
+
+
+   <div id="myGroup2" style="display: none;">
+    <h2>Dünaynin en boş sayfasi</h2>
+    <p>başlik yoktu memodan çaldim intaar etcem </p>
+    <img src="images/ahmet.jpeg" alt="Example image">
+   </div>
+
+    <!-- gives id to the group (the home page) so can be found later, style... means that its hidden if it was block it will be shown
+     h2 is a heading that is 2. biggest, p is a paragraph, img -->
+    <style>
+        
+       #myGroup2 {
+      color: rgb(0, 0, 0);
+      font-size: 20px;
+      font-family: Impact, sans-serif;
+      }
+    
+    </style>
+    <!-- id found like above #mytext, than changed its color, than font size-->
+
+
+<div id="myGroup3" style="display: none;">
+  <h2>XOX-UI</h2>
+  <p><strong>Overview:</strong> A simple user interface for tic-tac-toe made in Swift. Created to practice designing layouts without gameplay logic.</p>
+  <p><strong>Key Idea:</strong> Focus only on building the UI.</p>
+  <p><strong>How it Works:</strong></p>
+  <ul>
+   <li>The game board is organized inside a <code>ZStack</code>, so squares and text elements can overlap naturally.</li>
+   <li>Each cell is drawn as a blue square using <code>Rectangle().frame(width:120, height:120)</code>.</li>
+   <li>X and O are displayed as text views layered above the corresponding square.</li>
+   <li>The nine cells are arranged with <code>.offset(...)</code> values of −140, 0, or 140 for x and y, creating a centered 3×3 grid.</li>
+  </ul>
+
+  <p><strong>Limitations:</strong></p>
+  <ul>
+    <li>No gameplay features.</li>
+    <li>Only static design, no interaction.</li>
+  </ul>
+  <img src="images/xox.png" alt="XOX UI project image" style="width:150px; height:auto;">
+  <h2>XOX-Scratch</h2>
+  <p><strong>Overview:</strong> A tic-tac-toe game created with Scratch to learn block-based programming. Fully playable for two players.</p>
+  <p><strong>Key Idea:</strong> Use Scratch blocks to bring a classic game to life.</p>
+  <p><strong>How it Works:</strong></p>
+  <ul>
+   <li>At the start (green flag), initialize the square variable to 0.</li>
+   <li>When a circle is clicked: if its value is 0 or 2, change it to 1; otherwise change it to 2.</li>
+   <li>The X sprite continuously checks the variable: it shows if the value = 1, otherwise it stays hidden.</li>
+   <li>The O sprite continuously checks the variable: it shows if the value = 2, otherwise it stays hidden.</li>
+   <li>This setup is applied consistently across all nine cells of the grid.</li>
+   <li>Additional logic determines when a player has won</li>
+  </ul>
+  
+
+  <p><strong>Limitations:</strong></p>
+  <ul>
+    <li>Simple visuals.</li>
+    <li>No draw detection.</li>
+  </ul>
+  <img src="images/xoxs.gif" alt="XOX UI project image" style="width:150px; height:auto;">
+
+  <h2>Clock</h2>
+  <p><strong>Overview:</strong> A clock in Swift that adds one hour when clicked. It was made to test event handling, not real-time data.</p>
+  <p><strong>Key Idea:</strong> Simulate time updates and visuals with clicks.</p>
+  <p><strong>How it Works:</strong></p>
+  <ul>
+    <li>Shows a digital time display.</li>
+    <li>Click adds one hour or navigate with buttons.</li>
+    <li>Multiple clicks keep increasing the time.</li>
+  </ul>
+  <p><strong>Limitations:</strong></p>
+  <ul>
+    <li>Not connected to real time.</li>
+    <li>No seconds. </li>
+    <li>Animation makes sometimes the hands to go to the coordinate from the wrong direction. </li>
+  </ul>
+  <img src="images/clock.gif" alt="XOX UI project image" style="width:150px; height:auto;">
+
+  <h2>Portrait</h2>
+  <p><strong>Overview:</strong> A portrait made from simple shapes in Swift. This was a creative project combining basic graphics into a picture.</p>
+  <p><strong>Key Idea:</strong> Use only geometric shapes to form a portrait.</p>
+  <p><strong>How it Works:</strong></p>
+  <ul>
+    <li>Circles, rectangles, and symbols were combined.</li>
+    <li>Shapes aligned to resemble a face.</li>
+    <li>Balanced layout for recognition.</li>
+  </ul>
+  <p><strong>Limitations:</strong></p>
+  <ul>
+    <li>Very simple design.</li>
+    <li>No interactivity.</li>
+    <li>Has 1 missing ear.</li>
+  </ul>
+  <img src="images/Van-Gogh.png" alt="XOX UI project image" style="width:150px; height:auto;">
+
+  <h2>Calculator</h2>
+  <p><strong>Overview:</strong> A basic calculator in Swift that handles two inputs. Performs the four main arithmetic operations.</p>
+  <p><strong>Key Idea:</strong> Allow quick and simple calculations.</p>
+  <p><strong>How it Works:</strong></p>
+  <ul>
+    <li>User enters two numbers.</li>
+    <li>Calculator uses the veriables and adds, subtracts, multiplies, or divides.</li>
+    <li>Shows result on screen.</li>
+  </ul>
+  <p><strong>Limitations:</strong></p>
+  <ul>
+    <li>Only works with two numbers.</li>
+    <li>No advanced operations.</li>
+  </ul>
+  <img src="images/hesapmak.png" alt="XOX UI project image" style="width:150px; height:auto;">
+</div>
+
+
+ 
+
+<!-- gives id to the group (the projects page) so it can be shown or hidden with a button.
+     h2 is a heading that is the second biggest, p is a paragraph, ul/li are bullet points -->
+<style>
+  #myGroup3 {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: Impact, sans-serif;
+  }
+</style>
+
+    <!-- id found like above #mytext, than changed its color, than font size-->
+
+    
+
+    
+    
+ </body>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  <!-- <style>
+    /* Style for all hidden content sections */
+    .content {
+      display: none;   /* Keep hidden by default */
+      margin-top: 20px; /* Add some space above */
+    }
+
+    /* Style for the visible (active) section */
+    .active {
+      display: block;  /* Make this section visible */
+    }
+
+    /* Style for all images */
+    img {
+      width: 200px;     /* Fixed width */
+      height: auto;     /* Keep proportions correct */
+      margin-top: 10px; /* Space above the image */
+    }
+  </style> -->
+ <!-- </head>
+<body>
+
+  <h1>Kaan Tabag's Page</h1> Main heading -->
+
+  <!-- Buttons that call the showContent() function with a section id -->
+  <!-- <button onclick="showContent('projects')">Home</button>
+  <button onclick="showContent('about')">Projects</button>
+  <button onclick="showContent('contact')">Big Ideas</button>
+  <button onclick="showContent('services')">Documentation</button>
+
+  Each section has an id and class "content" (hidden by default) -->
+
+  <!-- <div id="projects" class="content">
+    <h2>Projects</h2>
+    <p>Here are some projects I worked on.</p>
+    <img src="https://via.placeholder.com/200x120?text=Projects" alt="Projects">
+  </div>
+
+  <div id="about" class="content">
+    <h2>About</h2>
+    <p>This section is about me.</p>
+    <img src="https://via.placeholder.com/200x120?text=About" alt="About">
+  </div>
+
+  <div id="contact" class="content">
+    <h2>Contact</h2>
+    <p>You can contact me here.</p>
+    <img src="https://via.placeholder.com/200x120?text=Contact" alt="Contact">
+  </div>
+
+  <div id="services" class="content">
+    <h2>Services</h2>
+    <p>These are the services I provide.</p>
+    <img src="https://via.placeholder.com/200x120?text=Services" alt="Services">
+  </div>
+
+  <script>
+    // Function to show one section and hide the rest
+    function showContent(id) {
+      // Get all sections with the "content" class
+      let sections = document.getElementsByClassName("content");
+
+      // Loop through them
+      for (let i = 0; i < sections.length; i++) {
+        sections[i].classList.remove("active"); // Remove "active" → hides them
+      }
+
+      // Find the section with the given id and show it
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+
+</body>
+</html> -->
